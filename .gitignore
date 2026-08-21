@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+controllers/*/map.pgm
+controllers/*/map.yaml
+controllers/*/localization_log.csv
+controllers/*/runtime.ini
+results/*
+!results/.gitkeep
+!results/scan_matching_log.csv
+!results/localization_log.csv
+!results/metrics_summary.csv
+!results/mapping_results.png
+!results/report_results.png
