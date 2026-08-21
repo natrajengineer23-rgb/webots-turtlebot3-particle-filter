@@ -1,0 +1,180 @@
+#VRML_SIM R2025a utf8
+# Self-contained arena adapted from Cyberbotics' Apache-2.0 TurtleBot3 sample.
+# Only the official R2025a robot PROTO is downloaded; the arena uses base nodes so
+# it also works when a macOS Webots installation omits its optional projects tree.
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+
+WorldInfo {
+  basicTimeStep 64
+}
+Viewpoint {
+  orientation 0.30472332270793473 0.6830874932044873 -0.6637282374778442 1.1835111768575177
+  position -1.5731172225512131 1.6462057351100228 2.506237334848655
+  follow "TurtleBot3Burger"
+  followType "Pan and Tilt Shot"
+}
+Background {
+  skyColor [
+    0.75 0.82 0.9
+  ]
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction -0.4 -0.6 -1
+}
+Solid {
+  translation 0 0 -0.025
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.72 0.72 0.72
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 6 6 0.05
+      }
+    }
+  ]
+  name "arena floor"
+  boundingObject Box {
+    size 6 6 0.05
+  }
+}
+Solid {
+  translation 2.96 0 0.2
+  rotation 0 0 1 1.570796
+  children [
+    Shape {
+      appearance DEF WALL_APPEARANCE PBRAppearance {
+        baseColor 0.28 0.32 0.38
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box { size 2.485 0.1 0.4 }
+    }
+  ]
+  name "arena wall east"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation 2.093 2.093 0.2
+  rotation 0 0 1 2.356194
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall north east"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation 0 2.96 0.2
+  rotation 0 0 1 3.141593
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall north"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation -2.093 2.093 0.2
+  rotation 0 0 1 3.926991
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall north west"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation -2.96 0 0.2
+  rotation 0 0 1 4.712389
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall west"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation -2.093 -2.093 0.2
+  rotation 0 0 1 5.497787
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall south west"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation 0 -2.96 0.2
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall south"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation 2.093 -2.093 0.2
+  rotation 0 0 1 0.785398
+  children [ Shape { appearance USE WALL_APPEARANCE geometry Box { size 2.485 0.1 0.4 } } ]
+  name "arena wall south east"
+  boundingObject Box { size 2.485 0.1 0.4 }
+}
+Solid {
+  translation 0.467367 -0.545426 0.15
+  children [
+    Shape {
+      appearance DEF BOX_APPEARANCE PBRAppearance {
+        baseColor 0.55 0.29 0.12
+        roughness 0.85
+        metalness 0
+      }
+      geometry Box { size 0.3 0.3 0.3 }
+    }
+  ]
+  name "wooden box"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation 1.26618 1.07342 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 1"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation -0.15697 0.782967 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 2"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation -1.62271 1.08968 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 3"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation -1.09887 -0.301011 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 4"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation -2.71307 -0.22263 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 7"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation -0.744103 2.69736 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 8"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation 2.30103 0.203241 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 9"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation 0.005323 -1.57959 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 5"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+Solid {
+  translation -1.0974 -1.8598 0.15
+  children [ Shape { appearance USE BOX_APPEARANCE geometry Box { size 0.3 0.3 0.3 } } ]
+  name "wooden box 6"
+  boundingObject Box { size 0.3 0.3 0.3 }
+}
+TurtleBot3Burger {
+  controller "mapping_controller"
+}

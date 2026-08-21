@@ -1,0 +1,19 @@
+metric,value,unit
+Mapping duration,160.384,s
+Mapping updates,836,updates
+Estimated mapping path length,10.4665452,m
+Accepted ICP matches,1,fraction
+Mean ICP RMSE,0.00532575501,m
+Median ICP RMSE,0.00645276834,m
+95th-percentile ICP RMSE,0.0110767187,m
+Maximum ICP RMSE,0.0794013852,m
+Localisation duration,116.416,s
+Localisation updates,607,updates
+Estimated localisation path length,8.59666884,m
+Mean effective sample size,477.155866,particles
+Median effective sample size,450.948684,particles
+Minimum effective sample size,5.45878076,particles
+Resampling-trigger updates,46,updates
+Resampling-trigger proportion,0.0757825371,fraction
+Estimated start-finish separation,0.194824096,m
+Post-initialisation start-finish separation,0.0626013979,m

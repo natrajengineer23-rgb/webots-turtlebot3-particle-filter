@@ -1,0 +1,42 @@
+robot:
+  wheel_radius: 0.033
+  axle_length: 0.160
+  max_motor_speed: 6.67
+  forward_speed: 0.15
+  reverse_speed: 0.10
+  turn_speed: 0.75
+mapping:
+  resolution: 0.05
+  width: 240
+  height: 240
+  origin: [-6.0, -6.0]
+  log_odds_free: -0.40
+  log_odds_occupied: 0.85
+  log_odds_min: -5.0
+  log_odds_max: 5.0
+  max_range: 3.5
+  scan_step: 2
+  update_every_steps: 3
+  submap_scans: 8
+  icp_max_iterations: 25
+  icp_tolerance: 0.0001
+  icp_max_correspondence: 0.35
+  icp_trim_fraction: 0.85
+  icp_min_pairs: 20
+  reject_translation_above: 0.30
+  reject_rotation_above: 0.45
+  reject_rmse_above: 0.12
+  reject_correction_translation_above: 0.12
+  reject_correction_rotation_above: 0.20
+localization:
+  particles: 800
+  motion_noise: [0.025, 0.08]
+  sensor_sigma: 0.25
+  random_measurement_probability: 0.08
+  measurement_power: 0.35
+  beam_step: 10
+  update_every_steps: 3
+  resample_threshold: 0.35
+  resample_roughening: [0.015, 0.035]
+  random_particle_injection: 0.02
+  seed: 7
